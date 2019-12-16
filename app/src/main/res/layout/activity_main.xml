@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arifw.mr.suhukonversi.MainActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_margin="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/thermometer"
+            app:civ_border_width="3dp"
+            app:civ_border_color="#FFff"/>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplikasi Konversi Suhu"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#ffff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="°C"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="°R"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="°F"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="°K"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#FFF"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="#ffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukan Suhu Awal"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
+        <EditText
+            android:id="@+id/input"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Suhu"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Konversi"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
+
+        <Spinner
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/suhu"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/hitung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="Hitung"/>
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/hapus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="Hapus"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:id="@+id/hasil"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#FFFF"/>
+
+</LinearLayout>
